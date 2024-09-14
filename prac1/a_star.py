@@ -58,7 +58,7 @@ class a_star:
         pq = PriorityQueue()
         visited = [[False for _ in range(self.m)] for _ in range(self.n)]
         g_costs = [[float('inf') for _ in range(self.m)] for _ in range(self.n)]
-        camino = [['.'] * self.m for _ in range(self.n)]
+        path = [['.'] * self.m for _ in range(self.n)]
 
         start_h = heuristica(self.origen.getFila(), self.origen.getCol())
         pq.put((start_h, (self.origen.getFila(), self.origen.getCol(), 0, start_h, [])))
@@ -80,7 +80,7 @@ class a_star:
 
         if self.best_cost != float('inf'):
             x, y = self.origen.getFila(), self.origen.getCol()
-            camino[x][y] = 'x'
+            path[x][y] = 'x'
             for move in self.best_moves:
                 if move == 1:
                     x -= 1
@@ -103,6 +103,6 @@ class a_star:
                     x -= 1
                     y -= 1
 
-                camino[x][y] = 'x'
+                path[x][y] = 'x'
 
-        return self.best_cost, camino
+        return self.best_cost, path
