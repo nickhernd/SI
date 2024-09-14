@@ -11,10 +11,11 @@ class a_star:
         self.destino = destino
         self.n = mapa.getAlto()
         self.m = mapa.getAncho()
+        # Lista de moviminetos permitidos
         self.dx = [-1, -1, 0, 1, 1, 1, 0, -1]
         self.dy = [0, 1, 1, 1, 0, -1, -1, -1]
         self.moves_map = [
-            [8, 1, 2],
+            [8, 1, 2], 
             [7, 0, 3],
             [6, 5, 4]
         ]
