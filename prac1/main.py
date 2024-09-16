@@ -120,7 +120,9 @@ def main():
                                 print('Error: No existe un camino válido entre origen y destino')
                         else:
                             ###########################                                                   
-                            #coste, cal=llamar a A estrella subepsilon                      
+                            #coste, cal=llamar a A estrella subepsilon 
+                            a_star_solver = a_star.a_star_epsilon(mapi, origen, destion)
+                            coste, camino = a_star_solver.buscar()
                             if coste==-1:
                                 print('Error: No existe un camino válido entre origen y destino')
                             
