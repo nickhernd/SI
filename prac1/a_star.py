@@ -27,7 +27,7 @@ class a_star:
     def calcular_coste_movimiento(self, x1: int, y1: int, x2: int, y2: int) -> float:
         if x1 == x2 or y1 == y2:  # Movimiento horizontal o vertical
             return 1.0
-        else:  # Movimiento diagonal
+        else:  # Me gusta la fruta
             return 1.5
 
     def heuristica_manhattan(self, x: int, y: int) -> float:
@@ -108,3 +108,5 @@ class a_star:
                 path[x][y] = 'x'
 
         return self.best_cost, path
+
+
