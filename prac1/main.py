@@ -51,9 +51,9 @@ def pulsaBoton(mapi, posicion):
 
     
     return res
-   
+
 # Construye la matriz para guardar el camino
-def inic(mapi):    
+ def inic(mapi):    
     cam=[]
     for i in range(mapi.alto):        
         cam.append([])
